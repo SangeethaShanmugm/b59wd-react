@@ -1,8 +1,44 @@
-.App {
-  text-align: center;
-}
-
 .add-color {
   display: flex;
   gap: 40px;
+}
+
+.movie-card {
+  width: 350px;
+}
+
+.movie-poster {
+  width: 350px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.movie-spec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.movie-summary {
+  margin-top: 0;
+  text-align: justify;
+}
+
+.movie-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.movie-button {
+  background-color: red;
+  border-style: none;
+  border-radius: 10px;
+  font-size: 20px;
 }
