@@ -4,13 +4,13 @@ export function Counter() {
   // let like = 10;
   const [like, setLike] = useState(0);
   const [dislike, setDislike] = useState(0);
-  console.log("updated Like", like);
+  // console.log("updated Like", like);
   return (
     <div>
       <button
         onClick={() => {
           setLike(like + 1);
-          console.log(like);
+          // console.log(like);
         }}
       >
         👍 {like}
@@ -18,7 +18,7 @@ export function Counter() {
       <button
         onClick={() => {
           setDislike(dislike + 1);
-          console.log(dislike);
+          // console.log(dislike);
         }}
       >
         👎 {dislike}
