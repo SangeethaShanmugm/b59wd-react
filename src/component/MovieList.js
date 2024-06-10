@@ -2,6 +2,8 @@ import { Movie } from "./Movie";
 import { INITIAL_MOVIE_LIST } from "../App";
 import { useState } from "react";
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 
 export function MovieList() {
   const [movieList, setMovieList] = useState(INITIAL_MOVIE_LIST);
@@ -17,32 +19,25 @@ export function MovieList() {
         <TextField id="name" label="Name" variant="outlined" value={name}
           onChange={(event) => setName(event.target.value)}
         />
-
-
-        <input type="text" value={name}
-          onChange={(event) => setName(event.target.value)} placeholder="Enter name" />
-        <input type="text" value={poster}
-          onChange={(event) => setPoster(event.target.value)} placeholder="Enter poster" />
-        <input type="text" value={rating}
-          onChange={(event) => setRating(event.target.value)} placeholder="Enter rating" />
-        <input type="text" value={summary}
-          onChange={(event) => setSummary(event.target.value)} placeholder="Enter summary" />
+        <TextField id="poster" label="Poster" variant="outlined" value={poster}
+          onChange={(event) => setPoster(event.target.value)}
+        />
+        <TextField id="rating" label="Rating" variant="outlined" value={rating}
+          onChange={(event) => setRating(event.target.value)}
+        />
+        <TextField id="name" label="Name" variant="outlined" value={summary}
+          onChange={(event) => setSummary(event.target.value)}
+        />
         {/* copy movieList and add newMovie */}
-
-        <button
-          onClick={() => {
-            const newMovie = {
-              name,
-              poster,
-              rating,
-              summary
-            }
-            setMovieList([...movieList, newMovie])
+        <Button variant="contained" onClick={() => {
+          const newMovie = {
+            name,
+            poster,
+            rating,
+            summary
           }
-          }
-        >Add Movie</button>
-
-
+          setMovieList([...movieList, newMovie])
+        }}>Add Movie</Button>
 
       </div>
       <div className="movie-list">
