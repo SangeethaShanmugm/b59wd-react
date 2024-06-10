@@ -1,6 +1,7 @@
 import { Movie } from "./Movie";
 import { INITIAL_MOVIE_LIST } from "../App";
 import { useState } from "react";
+import TextField from '@mui/material/TextField';
 
 export function MovieList() {
   const [movieList, setMovieList] = useState(INITIAL_MOVIE_LIST);
@@ -13,6 +14,11 @@ export function MovieList() {
   return (
     <div>
       <div className="add-movie-form">
+        <TextField id="name" label="Name" variant="outlined" value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
+
+
         <input type="text" value={name}
           onChange={(event) => setName(event.target.value)} placeholder="Enter name" />
         <input type="text" value={poster}
