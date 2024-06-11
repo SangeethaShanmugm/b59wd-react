@@ -5,8 +5,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
 
-export function MovieList() {
-  const [movieList, setMovieList] = useState(INITIAL_MOVIE_LIST);
+export function MovieList({ movieList, setMovieList }) {
+
 
   const [name, setName] = useState("Gravity")
   const [poster, setPoster] = useState("https://upload.wikimedia.org/wikipedia/en/f/f6/Gravity_Poster.jpg")

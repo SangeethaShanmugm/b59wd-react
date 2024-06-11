@@ -1,15 +1,25 @@
 import { AddColor } from "./AddColor";
 import "./App.css";
-import { Routes, Route, Link, useParams } from "react-router-dom"
+import { Routes, Route, Link, useNavigate } from "react-router-dom"
 import { MovieList } from "./component/MovieList";
 import { Home } from "./component/Home";
+import { NotFoundPage } from "./component/NotFoundPage";
+import { MovieDetails } from "./component/MovieDetails";
+import { useState } from "react";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import ExampleContext from "./component/context/ExampleContext";
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+
 
 export const INITIAL_MOVIE_LIST = [
   {
     name: "Brigerton",
     poster: "http://image.tmdb.org/t/p/original//luoKpgVwi1E5nQsi7W0UuKHu2Rq.jpg",
     rating: 4,
-    trailer: "https://youtu.be/gpv7ayf_tyE",
+    trailer: "https://www.youtube.com/embed/gpv7ayf_tyE",
     summary: "Bridgerton follows Daphne Bridgerton (Phoebe Dynevor), the eldest daughter of the powerful Bridgerton family as she makes her debut onto Regency London's competitive marriage market. Hoping to follow in her parent's footsteps and find Link match sparked by true love, Daphne's prospects initially seem to be unrivaled.",
     cast: {
       actor: "Nicola Coughlan",
@@ -21,7 +31,7 @@ export const INITIAL_MOVIE_LIST = [
     name: "Lucifer",
     poster: "http://image.tmdb.org/t/p/original//ekZobS8isE6mA53RAiGDG93hBxL.jpg",
     rating: 4.7,
-    trailer: "https://youtu.be/X4bF_quwNtw",
+    trailer: "https://www.youtube.com/embed/X4bF_quwNtw",
     summary: "Lucifer Morningstar (Tom Ellis) is the devil. He's tired of Hell and takes Link break in L.A. He's running his nightclub Lux with demon disciple Mazikeen (Lesley-Ann Brandt). His brother Amenadiel (D.B. Woodside) demands that he returns to Hell.",
     cast: {
       actor: "Tom Ellis",
@@ -528,43 +538,57 @@ export const INITIAL_MOVIE_LIST = [
 
 
 export default function App() {
+  //Lifting the state up => Lifted from child to parent
+  const [movieList, setMovieList] = useState(INITIAL_MOVIE_LIST);
+  const navigate = useNavigate()
+  //1. creating  => createContext ✅
+  //2. publisher => provider -context.Provider ✅
+  //3. subscriber => useContext => useContext(context)
+
+  const theme = createTheme({
+    palette: {
+      mode: 'light',
+    },
+  });
 
   return (
-    <div className="App">
-      <nav>
-        <ul>
-          {/* Link change page without refresh */}
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/movies">MovieList</Link></li>
-          <li><Link to="/add-color">AddColor</Link></li>
-          <li><Link to="/somewhere">Somewhere</Link></li>
-        </ul>
-      </nav>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div className="App">
+        <AppBar position="static">
+          <Toolbar>
+            <Button color="inherit" onClick={() => navigate("/")}>Home</Button>
+            <Button color="inherit" onClick={() => navigate("/movies")}>MovieList</Button>
+            <Button color="inherit" onClick={() => navigate("/add-color")}>AddColor</Button>
+            <Button color="inherit" onClick={() => navigate("/context")}>ExampleContext</Button>
+            <Button color="inherit" onClick={() => navigate("/somewhere")}>Somewhere</Button>
+            <Button color="inherit" >Mode</Button>
+          </Toolbar>
+        </AppBar>
+        {/* <nav>
+          <ul>
+            Link change page without refresh
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/movies">MovieList</Link></li>
+            <li><Link to="/add-color">AddColor</Link></li>
+            <li><Link to="/context">ExampleContext</Link></li>
+            <li><Link to="/somewhere">Somewhere</Link></li>
+          </ul>
+        </nav> */}
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movies" element={<MovieList />} />
-        <Route path="/movies/:movieid" element={<MovieDetails />} />
-        <Route path="/add-color" element={<AddColor />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<MovieList movieList={movieList} setMovieList={setMovieList} />} />
+          <Route path="/movies/:movieid" element={<MovieDetails movieList={movieList} />} />
+          <Route path="/add-color" element={<AddColor />} />
+          <Route path="/context" element={<ExampleContext />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </div>
+    </ThemeProvider>
   );
   //JSX ends
 }
 
 
-function MovieDetails() {
-  const { movieid } = useParams()
-  return (
-    <h1>Movies Detail Page - {movieid}</h1>
-  )
-}
-
-
-function NotFoundPage() {
-  return (
-    <img src="https://cdn.svgator.com/images/2024/04/detective-animation-404-error-page.gif" alt="404" />
-  )
-}
 
