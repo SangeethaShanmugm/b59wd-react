@@ -15,7 +15,7 @@ function Ref() {
             <h1>Ref Example</h1>
             <input type="text" ref={inputRef} onChange={handleInputChange} />
             <button onClick={handleSubmit}>Get Value</button>
-            <p>{inputRef.current.value}</p>
+            {/* <p>{inputRef.current.value}</p> */}
         </div>
     )
 }

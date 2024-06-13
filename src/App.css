@@ -50,3 +50,27 @@
   flex-wrap: wrap;
   gap: 5px;
 }
+
+.game-box {
+  border: 1px solid black;
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min-content;
+}
+
+.full-game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
