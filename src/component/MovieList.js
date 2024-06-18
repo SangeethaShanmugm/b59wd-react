@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
 
-export function MovieList({ movieList, setMovieList }) {
+export function MovieList({ movieList }) {
 
   return (
     <div>
