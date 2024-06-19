@@ -26,6 +26,13 @@ function AddMovie({ movieList, setMovieList }) {
                 onChange={(event) => setSummary(event.target.value)}
             />
             {/* copy movieList and add newMovie */}
+
+
+            {/* Task -> 20 mins */}
+
+
+
+
             <Button variant="contained" onClick={() => {
                 const newMovie = {
                     name,
@@ -33,6 +40,14 @@ function AddMovie({ movieList, setMovieList }) {
                     rating,
                     summary
                 }
+
+                fetch("https://659e6ba547ae28b0bd35caec.mockapi.io/movies", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(newMovie)
+                })
                 setMovieList([...movieList, newMovie])
             }}>Add Movie</Button>
 
