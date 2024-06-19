@@ -1,6 +1,7 @@
 [
     {
-        "name": "Brigerton",
+        "id": "1",
+        "name": "Brigerton123",
         "poster": "http://image.tmdb.org/t/p/original//luoKpgVwi1E5nQsi7W0UuKHu2Rq.jpg",
         "rating": 4,
         "trailer": "https://www.youtube.com/embed/gpv7ayf_tyE",
@@ -12,6 +13,7 @@
         "duration": "60min"
     },
     {
+        "id": "2",
         "name": "Lucifer",
         "poster": "http://image.tmdb.org/t/p/original//ekZobS8isE6mA53RAiGDG93hBxL.jpg",
         "rating": 4.7,
@@ -24,6 +26,7 @@
         "duration": "100min"
     },
     {
+        "id": "3",
         "name": "Journey 2",
         "poster": "https://upload.wikimedia.org/wikipedia/en/8/8e/Journey_2_Poster.jpg",
         "rating": 5.7,
@@ -36,6 +39,7 @@
         "duration": "95min"
     },
     {
+        "id": "4",
         "name": "Jurassic World",
         "poster": "https://picfiles.alphacoders.com/459/459865.jpg",
         "rating": 6.1,
@@ -48,6 +52,7 @@
         "duration": "130min"
     },
     {
+        "id": "5",
         "name": "Sonic the Hedgehog 2",
         "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIG-G9rwGzGb6aVgZsXbXT5yx554zeno4MwA&s",
         "rating": 6.5,
@@ -60,6 +65,7 @@
         "duration": "110min"
     },
     {
+        "id": "6",
         "name": "JMadame Web",
         "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/Madame_Web_%28film%29_poster.jpg/220px-Madame_Web_%28film%29_poster.jpg",
         "rating": 3.9,
@@ -72,6 +78,7 @@
         "duration": "90min"
     },
     {
+        "id": "7",
         "name": "Center of the Earth",
         "poster": "https://upload.wikimedia.org/wikipedia/en/a/ad/Journey_to_the_Center_of_the_Earth_%28TV_miniseries%29_dvd_cover.jpg",
         "rating": 5.8,
@@ -84,6 +91,7 @@
         "duration": "90min"
     },
     {
+        "id": "8",
         "name": "Hellboy II",
         "poster": "https://m.media-amazon.com/images/S/pv-target-images/0b79c527738b06b0a77d4c968f77c54a7161a29086f65cc82dbd50ea740afee5._SX1080_FMjpg_.jpg",
         "rating": 7,
@@ -96,6 +104,7 @@
         "duration": "120min"
     },
     {
+        "id": "9",
         "name": "Arrival",
         "poster": "https://upload.wikimedia.org/wikipedia/en/d/df/Arrival%2C_Movie_Poster.jpg",
         "rating": 7.9,
@@ -108,6 +117,7 @@
         "duration": "116min"
     },
     {
+        "id": "10",
         "name": "Mad Max: Fury Road",
         "poster": "https://upload.wikimedia.org/wikipedia/en/6/6e/Mad_Max_Fury_Road.jpg",
         "rating": 8.1,
@@ -194,7 +204,7 @@
     {
         "name": "The Last Airbender",
         "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Avatar_The_Last_Airbender_%282024_TV_series%29_poster.png/220px-Avatar_The_Last_Airbender_%282024_TV_series%29_poster.png",
-        "rating": 4.0,
+        "rating": 4,
         "trailer": "https://www.youtube.com/watch?v=-egQ79OrYCs",
         "summary": "The four nations of Air, Water, Earth and Fire lived in harmony until the Fire Nation declared war. A century later, there is still no end in sight to the destruction, then, an Avatar named Aang (Noah Ringer) discovers that he has the power to control the four elements. He joins forces with Katara (Nicola Peltz), a Waterbender, and her brother, Sokka, to restore balance and harmony to their world.",
         "cast": {
@@ -218,7 +228,7 @@
     {
         "name": "Movie 43",
         "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVJhfMM_SPSlPWYZb4YX7PC1tG54xdfgJg6Q&s",
-        "rating": 6.0,
+        "rating": 6,
         "trailer": "https://www.youtube.com/watch?v=4wxyy8Rcz4k",
         "summary": "Jaime Reyes suddenly finds himself in possession of an ancient relic of alien biotechnology called the Scarab. When the Scarab chooses Jaime to be its symbiotic host, he's bestowed with an incredible suit of armor that's capable of extraordinary and unpredictable powers, forever changing his destiny as he becomes the superhero Blue Beetle.",
         "cast": {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import IconButton from "@mui/material/IconButton";
 import Badge from '@mui/material/Badge';
 import MailIcon from '@mui/icons-material/Mail';
@@ -8,6 +8,21 @@ export function Counter() {
   const [like, setLike] = useState(0);
   const [dislike, setDislike] = useState(0);
   // console.log("updated Like", like);
+
+  useEffect(() => {
+    console.log("Total clicks", like + dislike)
+  }, [like, dislike])
+
+  // useEffect(() => {
+  //   console.log("Like is Updated", like)
+  // })
+
+
+  // useEffect(() => {
+  //   console.log("Like is Updated", like)
+  // },[])//call only once
+
+
   return (
     <div>
 

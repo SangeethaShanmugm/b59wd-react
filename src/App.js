@@ -558,11 +558,6 @@ export default function App() {
     },
   });
 
-  useEffect(() => {
-    fetch("https://659e6ba547ae28b0bd35caec.mockapi.io/movies")
-      .then((res) => res.json())
-      .then((data) => setMovieList(data))
-  }, [])//call only once
 
 
   return (
@@ -601,8 +596,8 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<MovieList movieList={movieList} />} />
-          <Route path="/movies/:movieid" element={<MovieDetails movieList={movieList} />} />
+          <Route path="/movies" element={<MovieList />} />
+          <Route path="/movies/:movieid" element={<MovieDetails />} />
           <Route path="/movies/add" element={<AddMovie movieList={movieList} setMovieList={setMovieList} />} />
 
 
