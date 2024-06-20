@@ -5,7 +5,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import IconButton from "@mui/material/IconButton";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-export function Movie({ movie, id }) {
+export function Movie({ movie, id, deleteButton, editButton }) {
   const [show, setShow] = useState(true);
   const navigate = useNavigate();
   const ratingStyles = {
@@ -45,6 +45,7 @@ export function Movie({ movie, id }) {
       {show ? <p className="movie-summary">{movie.summary}</p> : ""}
       <div className="movie-footer">
         <Counter />
+        {deleteButton} {editButton}
         <button className="movie-button">Watch Now</button>
       </div>
     </div>

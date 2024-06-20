@@ -19,6 +19,7 @@ import Ref from "./component/Hooks/Ref";
 import Reducer from "./component/Hooks/Reducer";
 import TicTacToe from "./component/TicTacToe";
 import LifeCycleA from "./component/class/LifeCycleA";
+import { EditMovie } from "./component/EditMovie";
 
 // export const INITIAL_MOVIE_LIST = [
 //   {
@@ -598,7 +599,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<MovieList />} />
           <Route path="/movies/:movieid" element={<MovieDetails />} />
-          <Route path="/movies/add" element={<AddMovie movieList={movieList} setMovieList={setMovieList} />} />
+          <Route path="/movies/add" element={<AddMovie />} />
+          <Route path="/movies/edit/:movieid" element={<EditMovie />} />
 
 
           <Route path="/add-color" element={<AddColor />} />
