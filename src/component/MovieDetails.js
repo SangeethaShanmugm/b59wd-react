@@ -4,6 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import UndoIcon from '@mui/icons-material/Undo';
 import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
+import { API } from "../global";
 
 
 export function MovieDetails() {
@@ -13,7 +14,7 @@ export function MovieDetails() {
   const [movie, setMovie] = useState({});
 
   useEffect(() => {
-    fetch(`https://659e6ba547ae28b0bd35caec.mockapi.io/movies/${movieid}`, {
+    fetch(`${API}/${movieid}`, {
       method: "GET"
     })
       .then((res) => res.json())

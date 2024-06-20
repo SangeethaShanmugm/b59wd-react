@@ -3,6 +3,7 @@ import { INITIAL_MOVIE_LIST } from "../App";
 import { useState, useEffect } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { API } from "../global";
 
 
 export function MovieList() {
@@ -10,7 +11,7 @@ export function MovieList() {
   const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
-    fetch("https://659e6ba547ae28b0bd35caec.mockapi.io/movies", {
+    fetch(`${API}`, {
       method: "GET"
     })
       .then((res) => res.json())
