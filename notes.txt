@@ -85,3 +85,55 @@
 
 
      MovieList (🌊)            MovieDetail (🌊)        
+
+
+
+
+redux -> state management tool -> complex
+
+
+Types
+--------
+1. redux
+2. redux-toolkit
+3. redux-persist
+4. redux-thunk
+5. redux-saga
+
+Package
+----------
+
+redux -> enable redux architecture(core library)
+react-redux -> connect react component to redux store
+redux-toolkit -> maintability, organized
+
+
+redux terminology
+--------------------
+
+store -> manage all the states -> global object
+action  -> CRUD operation 
+reducer -> what to add ->  function -> current state and action types
+dispatch -> get updated state
+
+redux-toolkit terminology
+--------------------------
+
+Reducer + action => createSlice(method)
+setup redux store -> configureStore(pass reducer, combine reducer)
+
+
+steps
+------
+
+1. Define the store => configureStore()
+2. define the reducer + action =>createSlice()
+3. select(state) => useSelector && select(action) => useDispatch
+
+Benefits
+---------
+
+1. centralized state management => store => complex
+2. get updated state
+3. debug => redux devTool chrome extension 
+4. performance

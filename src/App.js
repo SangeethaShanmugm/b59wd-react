@@ -21,6 +21,7 @@ import TicTacToe from "./component/TicTacToe";
 import LifeCycleA from "./component/class/LifeCycleA";
 import { EditMovie } from "./component/EditMovie";
 import BasicForm from "./component/formik/BasicForm";
+import Redux from "./component/redux/Redux";
 
 // export const INITIAL_MOVIE_LIST = [
 //   {
@@ -579,6 +580,7 @@ export default function App() {
             <Button color="inherit" onClick={() => navigate("/game")}>TicTacToe</Button>
             <Button color="inherit" onClick={() => navigate("/class")}>Class</Button>
             <Button color="inherit" onClick={() => navigate("/basic-form")}>Formik</Button>
+            <Button color="inherit" onClick={() => navigate("/redux")}>Redux</Button>
 
             <Button color="inherit" onClick={() => setMode(mode === "dark" ? "light" : "dark")}
               startIcon={mode === 'dark' ? <Brightness4Icon /> : <Brightness7Icon />}>
@@ -611,6 +613,7 @@ export default function App() {
           <Route path="/game" element={<TicTacToe />} />
           <Route path="/class" element={<LifeCycleA />} />
           <Route path="/basic-form" element={<BasicForm />} />
+          <Route path="/redux" element={<Redux />} />
 
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
